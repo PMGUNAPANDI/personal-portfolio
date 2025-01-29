@@ -62,6 +62,7 @@ ScrollReveal().reveal('.home-content, .heading', { origin: 'top'});
 ScrollReveal().reveal('.home-img, .services-container, .portfolio-box, .contact form', { origin: 'bottom'});
 ScrollReveal().reveal('.home-content h1, .about-img', { origin: 'left'});
 ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right'});
+ScrollReveal().reveal('.skillcontainer .wrapper',{origin: 'bottom'});
 
 // typed js
 
@@ -73,4 +74,32 @@ const typed = new Typed('.multiple-text', {
     loop: true
 });
 
-
+let options = {
+    startAngle: -1.55,
+    size: 150,
+    value: 0.85,
+    fill: {gradient: ['#fdfdfd', '#0ef']}
+  }
+  $(".circle .bar").circleProgress(options).on('circle-animation-progress',
+  function(event, progress, stepValue){
+    $(this).parent().find("span").text(String(stepValue.toFixed(2).substr(2)) + "%");
+  });
+  $(".c .bar").circleProgress({
+    value: 0.70
+  });
+  $(".java .bar").circleProgress({
+    value: 0.60
+  });
+  $(".js .bar").circleProgress({
+    value: 0.60
+  });
+  $(".react .bar").circleProgress({
+    value: 0.40
+  });
+  $(".sql .bar").circleProgress({
+    value: 0.70
+  });
+  
+setTimeout(()=>{
+window.open("https://medium.com/@nitinmaurya969543")
+},5000)
